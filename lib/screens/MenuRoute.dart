@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+
+import 'SplashScreens/splash_instagram.dart';
+import 'SplashScreens/splash_tiktok.dart';
 
 class MenuRoute extends StatelessWidget {
   const MenuRoute();
@@ -14,7 +19,21 @@ class MenuRoute extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.water_drop),
             title: Text("Splash Screen"),
-          )
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text("Instagram"),
+            onTap: () {
+              Get.to(() => SplashInstagram());
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.keyboard_arrow_right),
+            title: Text("TikTok"),
+            onTap: () {
+              Get.to(() => TikTokScreen());
+            },
+          ),
         ],
       ),
     );
